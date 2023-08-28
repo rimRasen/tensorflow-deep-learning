@@ -286,3 +286,14 @@ def calculate_results(y_true, y_pred):
                   "recall": model_recall,
                   "f1": model_f1}
   return model_results
+
+# count the directories and sum of images
+def count_images():
+  train_test_dir = len(os.listdir("./10_food_classes_10_percent"))
+  classes_dir = len(os.listdir("./10_food_classes_10_percent/train"))
+  train_images_dir = len(os.listdir("./10_food_classes_10_percent/train/chicken_curry"))
+  test_images_dir = len(os.listdir("./10_food_classes_10_percent/test/chicken_curry"))
+  print(f"There are {train_test_dir} images in the training and test directories")
+  print(f"There are {classes_dir} classes")
+  print(f"There are {train_images_dir} images in the training directory")
+  print(f"There are {test_images_dir} images in the test directory")
